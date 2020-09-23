@@ -140,5 +140,3 @@ dependencies:
     - jupyter-kite==1.0.0
     - pyqt5-sip==4.19.18
     - pyqtwebengine==5.12.1
-prefix: D:\Users\maeda-sh\Anaconda3\envs\default
-
