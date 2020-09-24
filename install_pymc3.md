@@ -6,16 +6,14 @@
 
 ``pip install pymc3``
 
-でインストール。そのあと、一緒に入る `xarray`モジュールが 0.16.1 だと互換性ないらしいので、
+でインストール。現時点（2020/09/24）のバージョンの問題点として：
 
-``pip install xarray==0.16.0``
+- ``xarray==0.16.1`` に非対応 -> ``xarray==0.16.0`` に変更
+- ``arviz==0.10.0`` が ``xarray==0.16.1`` に対応してしまっている -> ``arviz==0.9`` に変更
+- ``pymc3``使用時に使われる ``thetano`` が ``g++`` 使うので、``m2w64-toolchain`` を入れる
 
-で再インストールしたら使えるようになりました。
+順番としては、
 
-....
-
-と思ったら、``arviz==0.10.0`` が ``xarray==0.16.1`` に対応しているらしく、incompatible起きちゃったので、
-
-``pip install arviz==0.9.0``
-
-で再インストールしなおした。
+1. `pip install arviz==0.10.0`
+2. `pip install xarray==0.16.0`
+3. `conda install m2w64-toolchain`
