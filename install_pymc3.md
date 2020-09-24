@@ -42,7 +42,6 @@ https://www.javadrive.jp/cstart/install/index6.html
 ## 注意
 
 ``libpython`` 入れたあと ``gcc -v``してみると、MinGW-w64で入れたバージョン（`gcc version 8.1.0 (x86_64-posix-seh-rev0, Built by MinGW-W64 project)`）でなく、
-
 `gcc version 5.3.0 (Rev5, Built by MSYS2 project)` が現れるようになった……なぜ……
 
 もしかしたら、`libpython` 入れたらそれで解決するのかも？
