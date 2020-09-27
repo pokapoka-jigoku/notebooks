@@ -34,12 +34,12 @@
 ``jupyter labextension install jupyterlab_filetree``
 
 ``
-pip install jupytext --upgrade
+pip install jupytext --upgrade  
 jupyter labextension install jupyterlab-jupytext
 ``
 
 ``
-pip install --upgrade jupyterlab-git
+pip install --upgrade jupyterlab-git  
 jupyter lab build
 ``
 
@@ -50,26 +50,28 @@ jupyter lab build
 これは正直微妙で、`bokeh`でなんとかしろという感じもするが、一応。
 
 ``pip install ipywidgets``
+
 ``jupyter nbextension enable --py widgetsnbextension``
+
 ``jupyter labextension install @jupyter-widgets/jupyterlab-manager``
 
 これで基本使えるはず。なんだけど、labで使うときの注意点として：
 
 1. 定義したウィジェットはきちんと表示する：
 
-``from IPython.display import display
+``from IPython.display import display  
   display(WIDGET)
 ``
 
 2. コールバック中になにかしら`print`したいときは、`Output`にきちんと食わせる：
 
 ``
-output = widgets.Output()
+output = widgets.Output()  
 display(output)
 
-@output.capture(clear_output=True)
-def callback():
-    print('Call back!!')
+@output.capture(clear_output=True)  
+def callback():  
+    print('Call back!!')  
 ``
 
 ### Kiteインスコ
