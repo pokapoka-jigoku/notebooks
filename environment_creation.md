@@ -31,8 +31,6 @@
 
 ``jupyter labextension install @lckr/jupyterlab_variableinspector``
 
-``jupyter labextension install jupyterlab_filetree``
-
 ```
 pip install jupytext --upgrade  
 jupyter labextension install jupyterlab-jupytext
