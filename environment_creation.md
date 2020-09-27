@@ -33,15 +33,15 @@
 
 ``jupyter labextension install jupyterlab_filetree``
 
-``
+```
 pip install jupytext --upgrade  
 jupyter labextension install jupyterlab-jupytext
-``
+```
 
-``
+```
 pip install --upgrade jupyterlab-git  
 jupyter lab build
-``
+```
 
 
 
@@ -59,20 +59,21 @@ jupyter lab build
 
 1. 定義したウィジェットはきちんと表示する：
 
-``from IPython.display import display  
-  display(WIDGET)
-``
+```
+from IPython.display import display  
+display(WIDGET)
+```
 
 2. コールバック中になにかしら`print`したいときは、`Output`にきちんと食わせる：
 
-``
+```
 output = widgets.Output()  
 display(output)
 
 @output.capture(clear_output=True)  
 def callback():  
     print('Call back!!')  
-``
+```
 
 ### Kiteインスコ
 
