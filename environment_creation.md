@@ -20,6 +20,8 @@
 
 ``conda install numpy scipy pandas matplotlib seaborn bokeh scikit-learn -c conda-forge``
 
+``conda install -c conda-forge umap-learn`` も入れとこ。
+
 ### jupyter lab のエクステンション追加
 
 まあこの辺かなあ、というのを。
