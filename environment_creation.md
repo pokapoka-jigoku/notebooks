@@ -94,13 +94,63 @@ def callback():
 
 ### pymc3
 
-これもややこしい。あとでかく
+``pip install pymc3``
+
+でインストール。現時点（2020/09/24）のバージョンの問題点として：
+
+- ``xarray==0.16.1`` に非対応 -> ``xarray==0.16.0`` に変更
+- ``arviz==0.10.0`` が ``xarray==0.16.1`` に対応してしまっている -> ``arviz==0.9`` に変更
+- ``pymc3``使用時に使われる ``thetano`` が ``g++`` 使うので、``m2w64-toolchain`` を入れる
+
+順番としては、
+
+1. `pip install arviz==0.10.0`
+2. `pip install xarray==0.16.0`
+3. `conda install m2w64-toolchain`
+
+
+#### MinGW-w64のインストール
+
+まずコンソール開いて
+
+``gcc -v``
+
+でバージョン出るかチェック。
+
+https://www.javadrive.jp/cstart/install/index6.html
+
+そのあと、
+
+``conda install -c anaconda libpython``
+
+現時点、``libpython-2.1``がインストールされた。
+
+``import theano`` がうまくいけば、多分大丈夫なはず！
+
+#### 注意
+
+``libpython`` 入れたあと ``gcc -v``してみると、MinGW-w64で入れたバージョン（`gcc version 8.1.0 (x86_64-posix-seh-rev0, Built by MinGW-W64 project)`）でなく、
+`gcc version 5.3.0 (Rev5, Built by MSYS2 project)` が現れるようになった……なぜ……
+
+もしかしたら、`libpython` 入れたらそれで解決するのかも？
 
 ### opencv2
 
-これがややこしい。あとでかく
+ここから該当パッケージインストールする：https://www.lfd.uci.edu/~gohlke/pythonlibs/#opencv
 
-### 
+[参考](https://qiita.com/fiftystorm36/items/1a285b5fbf99f8ac82eb#%E4%BB%A3%E6%9B%BF%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%96%B9%E6%B3%95windows)によれば：
+
+- opencv_python-3.4.6: モジュール自体のバージョン
+- contrib: contrib モジュールを含む
+- cp37: Python 自体のバージョン (Python 3.7.X)
+- win32/win64/win_amd64
+- win32: Intel CPU 32bit Windows
+- win64: Intel CPU 64bit Windows
+- win_amd64: AMD CPU 64bit Windows
+
+とのことなので、`opencv_python‑4.4.0‑cp38‑cp38‑win_amd64.whl` (Python ver.によって調整）をダウンロードでOK
+
+``pip install opencv_python‑4.4.0‑cp38‑cp38‑win_amd64.whl` で完了
 
 ## 参考サイト
 
