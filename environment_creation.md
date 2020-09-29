@@ -85,6 +85,23 @@ def callback():
 
 ``jupyter lab``
 
+
+## 各拡張環境
+
+### skbio
+
+``pip install scikit-bio``
+
+### pymc3
+
+これもややこしい。あとでかく
+
+### opencv2
+
+これがややこしい。あとでかく
+
+### 
+
 ## 参考サイト
 
 - jupyterlab/debegger: https://github.com/jupyterlab/debugger
