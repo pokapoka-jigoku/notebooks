@@ -88,6 +88,8 @@ def callback():
 
 ## 各拡張環境
 
+``conda create -n [作りたい環境名] --clone default`` でデフォルト環境クローンしてから、適宜他の入れていったりしている
+
 ### skbio
 
 ``pip install scikit-bio``
