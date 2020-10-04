@@ -94,6 +94,10 @@ def callback():
 
 ``pip install scikit-bio``
 
+### Gpy
+
+``conda install -c conda-forge gpy``
+
 ### pymc3
 
 ``pip install pymc3``
