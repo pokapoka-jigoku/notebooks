@@ -43,8 +43,6 @@ pip install --upgrade jupyterlab-git
 jupyter lab build
 ```
 
-
-
 ### ipywidgets への対応
 
 これは正直微妙で、`bokeh`でなんとかしろという感じもするが、一応。
@@ -89,6 +87,25 @@ def callback():
 ## 各拡張環境
 
 ``conda create -n [作りたい環境名] --clone default`` でデフォルト環境クローンしてから、適宜他の入れていったりしている
+
+### default-lite
+
+やっぱnotebookの概念にデバッガっていらんくね？！！？と思ったので、liteバージョン作ることにした。
+
+``conda create -n default-lite python=3.8 numpy scipy pandas matplotlib seaborn bokeh scikit-learn nodejs notebook jupyterlab -c conda-forge``
+
+``conda install -c conda-forge umap-learn``
+
+``jupyter labextension install @jupyterlab/debugger @jupyterlab/otc @lckr/jupyterlab_variableinspector @kiteco/jupyterlab-kite @jupyter-widgets/jupyterlab-manager``
+
+``pip install jupyter-kite``
+
+``pip install ipywidgets``
+
+``jupyter nbextension enable --py widgetsnbextension``
+
+こんなもんかな？
+
 
 ### skbio
 
