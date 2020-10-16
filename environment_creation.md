@@ -96,7 +96,7 @@ def callback():
 
 ``conda install -c conda-forge umap-learn``
 
-``jupyter labextension install @jupyterlab/debugger @jupyterlab/otc @lckr/jupyterlab_variableinspector @kiteco/jupyterlab-kite @jupyter-widgets/jupyterlab-manager``
+``jupyter labextension install @jupyterlab/c @lckr/jupyterlab_variableinspector @kiteco/jupyterlab-kite @jupyter-widgets/jupyterlab-manager``
 
 ``pip install jupyter-kite``
 
