@@ -115,6 +115,19 @@ def callback():
 
 ``conda install -c conda-forge gpy``
 
+### 深層学習&PPL系
+
+- numpyro: Win10だとなんかうまくいかずパス
+- pyro: ``pip install pyro-ppl`` で素直に入った
+- tensorflow2: ``pip install tensorflow`` で素直に入った（``numpy``がバージョン変わった？）
+- pytorch: ``conda install pytorch torchvision cudatoolkit=10.2 -c pytorch`` で素直に入った
+
+参考として：
+- https://deepblue-ts.co.jp/%E7%B5%B1%E8%A8%88%E5%AD%A6/%E3%83%99%E3%82%A4%E3%82%BA%E7%B5%B1%E8%A8%88/pyro-try/
+- https://pytorch.org/get-started/locally/
+- https://www.tensorflow.org/install/pip?hl=ja
+
+
 ### pymc3
 
 ``pip install pymc3``
