@@ -29,7 +29,7 @@
 
 ``jupyter labextension install @jupyterlab/debugger``
 
-``jupyter labextension install @jupyterlab/otc``
+``jupyter labextension install @jupyterlab/toc``
 
 ``jupyter labextension install @lckr/jupyterlab_variableinspector``
 
@@ -105,6 +105,10 @@ def callback():
 ``jupyter nbextension enable --py widgetsnbextension``
 
 こんなもんかな？
+
+``pip install jax jaxlib``
+
+も入れておく。
 
 
 ### skbio
