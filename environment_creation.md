@@ -108,7 +108,9 @@ def callback():
 
 ``pip install jax jaxlib``
 
-``pip install tensorflow``
+``pip install tensorflow``（``numpy``がダウングレードするかも）
+
+``pip install numpyro``（``jax``がダウングレードするかも）
 
 も入れておく。
 
