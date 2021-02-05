@@ -108,6 +108,8 @@ def callback():
 
 ``pip install jax jaxlib``
 
+``pip install tensorflow``
+
 も入れておく。
 
 
